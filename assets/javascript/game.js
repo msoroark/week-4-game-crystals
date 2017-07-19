@@ -14,6 +14,7 @@ var game = {
 		this.greenVal = pickedNum(1, 12),
 		this.purpleVal = pickedNum(1, 12),
 		this.orangeVal = pickedNum(1, 12),
+		this.score = 0;
 
 
 		$('#wins').html(game.wins);
@@ -52,7 +53,8 @@ function checkStatus()	{
 	game.wins++;
 	$('#wins').html(game.wins);
 	console.log(game.wins);
-	game.resetScore()
+	game.resetScore();
+	console.log(game);
 	}
 
 	if (parseInt(game.score) > parseInt(game.goalNum)) {
@@ -60,10 +62,21 @@ function checkStatus()	{
 	$('#losses').html(game.loss);
 	console.log(game.loss);
 	game.resetScore()
+	console.log(game);
 	}
 }
 
-function onClick(id, value) {
+function onClick(id) {
+	var value = 0;
+	if(id === "#blue") {
+		value = game.blueVal;
+	} else if (id === "#purple") {
+		value = game.purpleVal;
+	} else if (id === "#green") {
+		value = game.greenVal;
+	} else if (id === "#orange") {
+		value = game.orangeVal
+	}
 
 	$(id).on('click', function() {
 	game.score += parseInt(value);
@@ -74,10 +87,10 @@ function onClick(id, value) {
 }
 //assign crystals Value. 
 
-onClick('#blue', game.blueVal);
-onClick('#purple', game.purpleVal);
-onClick('#green', game.greenVal);
-onClick('#orange', game.orangeVal);
+onClick('#blue');
+onClick('#purple');
+onClick('#green');
+onClick('#orange');
 	
 
 
