@@ -1,0 +1,52 @@
+body {
+	background-image: url('congruent_outline.png');
+	background-repeat: repeat;
+}
+h1 {
+	font-family: 'Walter Turncoat', cursive;
+	background-color: rgba(247, 169, 59, 0.5);
+	padding: 20px; 
+
+}
+
+body{
+	font-family: 'Special Elite', cursive;
+
+}
+
+.col-sm-3{
+	margin-top: 10px;
+}
+
+.col-sm-4 {
+	background-color: rgba(65, 243, 240, 0.56);
+	min-height: 220px;
+	max-width: 270px;;
+	margin: 10px 0px 10px 22px;
+	font-size: large;
+	text-align: center;
+}
+
+.col-sm-12 {
+	padding: 0;
+}
+
+.crystals {
+	max-width: 150px;
+	max-height: 150px; 
+
+}
+
+.score-board {
+	font-size: 40px;
+}
+
+#instructions{
+	background-color: rgba(233, 128, 236, 0.48);
+	padding: 20px; 
+	
+}
+
+#middle {
+	background-color: rgba(123, 228, 108, 0.56)
+}

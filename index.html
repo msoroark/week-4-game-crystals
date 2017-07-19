@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite|Walter+Turncoat" rel="stylesheet">
+
+	<title>Crystals Collector</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<header><h1>Crystals Collector!</h1></header>
+			</div>
+		</div>	
+
+		<div class="row">
+			<div class="col-sm-3" id="instructions">
+				<p> You will be given a random number at the start of the game.</p>
+				<br>
+				<p> There are four crystals. By clicking on a crystal you will add the specific amount of points to your total score. </p>
+				<br>
+				<p>You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
+				<br>
+				<p>The value of each crystal is hidden from you until you click on it. </p>
+				<br>
+				<p>Each time when the game starts, the game will change the values of each crystal. Good luck!</p>
+			</div>
+
+			<div class="col-sm-9">
+
+				<div class="row">
+					<div class="col-sm-4">
+						<p> Your Number: 
+						<br>
+						<span class="score-board" id="number_to_guess"></span></p> 
+						</div>
+					<div class="col-sm-4" id="middle">
+						<p> Wins: 
+						<br>
+						<span class="score-board" id="wins">0</span></p>
+						<br>
+						<p> Losses: 
+						<br>
+						<span class="score-board" id="losses">0</span></p>
+						</div>
+					<div class="col-sm-4">
+						<p> Total Score: 
+						<br>
+						<span class="score-board" id="total_score">0</span></p>
+						</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+						<img class="crystals" id="blue" src="assets/images/blue.png">
+						</div>
+					<div class="col-sm-3">
+						<img class="crystals" id="purple" src="assets/images/purple.png">
+						</div>
+					<div class="col-sm-3">
+						<img class="crystals" id="green" src="assets/images/green.png">
+						</div>
+					<div class="col-sm-3">
+						<img class="crystals" id="orange" src="assets/images/orange.png">
+						</div>
+					
+				</div>
+			</div>
+
+	
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js">
+	</script>
+
+</body>
+</html>
