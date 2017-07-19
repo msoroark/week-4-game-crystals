@@ -9,17 +9,17 @@ var game = {
 	orangeVal: pickedNum(1, 12),
 	score: 0,
 	resetScore: function() {
-			game = {
-		goalNum: pickedNum(19, 120),
-		blueVal: pickedNum(1, 12),
-		greenVal: pickedNum(1, 12),
-		purpleVal: pickedNum(1, 12),
-		orangeVal: pickedNum(1, 12),
-		score: 0,
-	}
+		this.goalNum = pickedNum(19, 120);
+		this.blueVal = pickedNum(1, 12),
+		this.greenVal = pickedNum(1, 12),
+		this.purpleVal = pickedNum(1, 12),
+		this.orangeVal = pickedNum(1, 12),
 
-	$('#number_to_guess').html(game.goalNum);
-	$('#total_score').html(game.score);
+
+		$('#wins').html(game.wins);
+		$('#losses').html(game.loss);
+		$('#number_to_guess').html(game.goalNum);
+		$('#total_score').html(game.score);
 	}
 }
 
@@ -49,14 +49,14 @@ function pickedNum(min, max) {
 function checkStatus()	{ 
 
 	if (game.score == parseInt(game.goalNum)) {
-	game.wins += 1;
+	game.wins++;
 	$('#wins').html(game.wins);
 	console.log(game.wins);
 	game.resetScore()
 	}
 
 	if (parseInt(game.score) > parseInt(game.goalNum)) {
-	game.loss += 1;
+	game.loss++;
 	$('#losses').html(game.loss);
 	console.log(game.loss);
 	game.resetScore()
