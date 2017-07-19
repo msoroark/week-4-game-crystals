@@ -21,6 +21,19 @@ var game = {
 		$('#losses').html(game.loss);
 		$('#number_to_guess').html(game.goalNum);
 		$('#total_score').html(game.score);
+	},
+	valueById: function(id) {
+		var value = 0;
+		if(id === "#blue") {
+			value = this.blueVal;
+		} else if (id === "#purple") {
+			value = this.purpleVal;
+		} else if (id === "#green") {
+			value = this.greenVal;
+		} else if (id === "#orange") {
+			value = this.orangeVal
+		}
+		return value;
 	}
 }
 
@@ -67,22 +80,23 @@ function checkStatus()	{
 }
 
 function onClick(id) {
-	var value = 0;
-	if(id === "#blue") {
-		value = game.blueVal;
-	} else if (id === "#purple") {
-		value = game.purpleVal;
-	} else if (id === "#green") {
-		value = game.greenVal;
-	} else if (id === "#orange") {
-		value = game.orangeVal
-	}
+	// var value = 0;
+	// if(id === "#blue") {
+	// 	value = game.blueVal;
+	// } else if (id === "#purple") {
+	// 	value = game.purpleVal;
+	// } else if (id === "#green") {
+	// 	value = game.greenVal;
+	// } else if (id === "#orange") {
+	// 	value = game.orangeVal
+	// }
 
 	$(id).on('click', function() {
-	game.score += parseInt(value);
-	$('#total_score').html(game.score);
-	console.log(value);
-	checkStatus();
+		var value = game.valueById(id);
+		game.score += parseInt(value);
+		$('#total_score').html(game.score);
+		console.log(value);
+		checkStatus();
 	});
 }
 //assign crystals Value. 
