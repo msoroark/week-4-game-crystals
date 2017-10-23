@@ -10,4 +10,4 @@ First project using jQuery
 	-CSS
 	-Bootstrap
 	-JavaScript
-  -jQuery
+	-jQuery
